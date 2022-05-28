@@ -1,4 +1,4 @@
 package com.projetWeb.citwe.presentation.api;
 
-public class AdministrateurRestController {
+public class UserRestController {
 }
