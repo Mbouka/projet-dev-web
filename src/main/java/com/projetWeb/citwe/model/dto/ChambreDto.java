@@ -1,4 +1,4 @@
-package com.projetWeb.citwe.model.entities;
+package com.projetWeb.citwe.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,27 +6,27 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Etudiant {
+
+public class ChambreDto {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
 
-    public String nom;
-    public String prenom;
-    public String  email;
-    public String matricule;
-    public String  telephone;
+    private Long Numchambre;
+    private Long Numcompteureau;
+    private Long Numcompteurele;
+    private String statut;
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
+
 }
