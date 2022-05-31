@@ -13,6 +13,7 @@ import java.util.List;
 @RequestMapping("/api/etudiant")
 @Slf4j
 public class EtudiantRestController {
+
     @Autowired
     private Ietudiant ietudiant;
 

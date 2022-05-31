@@ -10,7 +10,8 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ChambreDto {
+
     private String numero;
     private String statut;
-    private String Numchambre;
+    private String Numetudiant;
 }

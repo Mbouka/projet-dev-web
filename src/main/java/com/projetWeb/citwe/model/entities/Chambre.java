@@ -25,6 +25,7 @@ public class Chambre {
         this.idChambre = idChambre;
     }
     @Column(nullable = false)
+
     private String numero;
     private String statut;
 

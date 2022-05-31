@@ -18,7 +18,7 @@ public class ChambreRestController {
 
     @PostMapping(value = "/save")
     public void enregistrerChambre(@RequestBody ChambreDto create) {
-       ChambreRestController.log.info("enregistrer-acte");
+       ChambreRestController.log.info("enregistrer-chambre");
         ichambre.saveChambre(create);
     }
 

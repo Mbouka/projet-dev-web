@@ -1,5 +1,6 @@
 package com.projetWeb.citwe.serviceImpl;
 
+
 import com.projetWeb.citwe.mapper.FactureMapper;
 import com.projetWeb.citwe.model.Dto.FactureDto;
 import com.projetWeb.citwe.respository.FactureRespository;
@@ -15,6 +16,14 @@ public class factureServiceImpl implements Ifacture {
     FactureMapper factureMapper;
     @Override
     public int saveFacture(FactureDto factureDto) {
-        return factureRespository.save(factureMapper.toEntity(factureDto)).getIdFacture().intValue();
+        return factureRespository.save(factureMapper.toEntity(factureDto)).getId().getIdFacture().intValue();
     }
+
+   /* @Override
+    public FactureDto searchFactureByIdFacture(Long id) {
+        return factureRespository.toDto(factureRespository.findById(id).get());
+    }*/
+
+
+
 }
