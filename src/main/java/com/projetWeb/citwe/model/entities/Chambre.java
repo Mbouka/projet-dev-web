@@ -7,16 +7,28 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Data
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 public class Chambre {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private Long NumEtudiant;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_chambre", nullable = false)
+    public Long idChambre;
+
+    public Long getIdChambre() {
+        return idChambre;
+    }
+
+    public void setIdChambre(Long idChambre) {
+        this.idChambre = idChambre;
+    }
+    @Column(nullable = false)
+    private String numero;
     private String statut;
 
+    private String Numetudiant;
 
 
 }
