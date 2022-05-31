@@ -19,10 +19,10 @@ public class factureServiceImpl implements Ifacture {
         return factureRespository.save(factureMapper.toEntity(factureDto)).getId().getIdFacture().intValue();
     }
 
-   /* @Override
+    @Override
     public FactureDto searchFactureByIdFacture(Long id) {
-        return factureRespository.toDto(factureRespository.findById(id).get());
-    }*/
+        return factureMapper.toDto(factureRespository.findById(id).get());
+    }
 
 
 

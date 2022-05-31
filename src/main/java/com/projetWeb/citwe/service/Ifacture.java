@@ -8,7 +8,7 @@ public interface Ifacture {
 
     int saveFacture(FactureDto factureDto);
 
-    /*FactureDto searchFactureByIdFacture(Long id);*/
+    FactureDto searchFactureByIdFacture(Long id);
 
 
 }
