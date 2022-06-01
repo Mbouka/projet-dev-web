@@ -1,6 +1,8 @@
 package com.projetWeb.citwe.mapper;
 
+import com.projetWeb.citwe.model.Dto.ChambreDto;
 import com.projetWeb.citwe.model.Dto.EtudiantchambreDto;
+import com.projetWeb.citwe.model.entities.Chambre;
 import com.projetWeb.citwe.model.entities.Etudiantchambre;
 import org.mapstruct.*;
 
@@ -16,4 +18,5 @@ public interface EtudiantchambreMapper {
     Etudiantchambre toEntity(EtudiantchambreDto etudiantchambreDto);
 
     EtudiantchambreDto toDto(Etudiantchambre etudiantchambre);
+    void copy(EtudiantchambreDto etudiantchambreDto, @MappingTarget Etudiantchambre etudiantchambre);
 }

@@ -1,5 +1,6 @@
 package com.projetWeb.citwe.presentation.api;
 
+import com.projetWeb.citwe.model.Dto.EtudiantDto;
 import com.projetWeb.citwe.model.Dto.EtudiantchambreDto;
 import com.projetWeb.citwe.service.IEtudiantchambre;
 import lombok.extern.slf4j.Slf4j;

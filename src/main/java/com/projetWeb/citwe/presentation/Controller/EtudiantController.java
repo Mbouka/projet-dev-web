@@ -30,21 +30,21 @@ public class EtudiantController {
         return "ProfileChambre";
     }
     //affichage du formulaire d'edition d'un acte
-    @GetMapping("/editerchambreform")
-    public String editerActeForm(@RequestParam(name = "numero") String matricule, Model model) {
+    @GetMapping("/editeretudiantchambreform")
+    public String editeretudiantchambreForm(@RequestParam(name = "numero") String numero, Model model) {
 
-        EtudiantchambreDto etudiantchambreDto= ietudiant.searchEtudiantByMatricule(matricule);
+        EtudiantchambreDto etudiantchambreDto= iEtudiantchambre.searchEtudiantChambreByNumero(numero);
         model.addAttribute("etudiantchambreDto", etudiantchambreDto);
         return "infoEtudiant";
     }
 
-    @PostMapping("/editeretudiant")
-    public String editeretudiant(@ModelAttribute EtudiantDto etudiantDto,
+    @PostMapping("/editeretudiantchambre")
+    public String editeretudiant(@ModelAttribute EtudiantchambreDto etudiantchambreDto,
                              Model model) {
 
         EtudiantController.log.info("editer-etudiant");
         // appel de la couche service ou metier injectée pour enregistrer un materiel
-        ietudiant.updateEtudiant(etudiantDto);
+       iEtudiantchambre.updateEtudiantChambre(etudiantchambreDto);
         return "redirect:/ProfilChambre";
     }
 
