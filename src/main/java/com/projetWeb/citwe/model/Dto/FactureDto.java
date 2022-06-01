@@ -6,6 +6,13 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class FactureDto implements Serializable {
+public class FactureDto  {
+
     private final FactureId id;
+    private String numFacture;
+private  String consoEau;
+private String consoElectricite;
+private String prix;
+private String date;
+private String delai;
 }

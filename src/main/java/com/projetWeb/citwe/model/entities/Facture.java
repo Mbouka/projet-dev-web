@@ -17,4 +17,8 @@ public class Facture {
     public void setId(FactureId id) {
         this.id = id;
     }
+
+    private  String numFacture;
+
+
 }

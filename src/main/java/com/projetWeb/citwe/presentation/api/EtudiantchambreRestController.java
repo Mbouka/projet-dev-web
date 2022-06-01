@@ -16,11 +16,11 @@ public class EtudiantchambreRestController {
     @Autowired
     private IEtudiantchambre iEtudiantchambre;
 
-   /*@PostMapping(value = "/save")
-    public void enregistrerEtudiant(@RequestBody EtudiantchambreDto create) {
-        EtudiantRestController.log.info("enregistrer-etudiantchambre");
+   @PostMapping(value = "/save")
+    public void enregistrerEtudiantchambre(@RequestBody EtudiantchambreDto create) {
+        EtudiantchambreRestController.log.info("enregistrer-etudiantchambre");
         iEtudiantchambre.saveEtudiantChambre(create);
-    }*/
+    }
 
     @GetMapping("/all")
     public ResponseEntity<List<EtudiantchambreDto>> getAllEtudiantchambre() {

@@ -24,7 +24,7 @@ public class ChambreRestController {
     }
 
     @GetMapping("/{numero}/data")
-    public ResponseEntity<ChambreDto> getRoomsByRooms(@PathVariable String numero){
+    public ResponseEntity<ChambreDto> getChambre(@PathVariable String numero){
 
         return ResponseEntity.ok(ichambre.searchChambreNumero(numero));
     }
