@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" html xmlns:th="http://www.thymeleaf.org">
-<th:block th:replace="fragments/_head.html::head"></th:block>
+<th:block th:replace="Fragment/_head.html::head"></th:block>
 
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
-        <th:block th:replace="Fragment/_leftcolAdmin.html::leftcolAdmin"></th:block>
+          <th:block th:replace="Fragment/_leftcolAdmin.html::leftcolAdmin"></th:block>
         </div>
-        <!-- top navigation -->
         <th:block th:replace="Fragment/_topnav.html::topnav"></th:block>
         <!-- /top navigation -->
         <!-- ======= Hero Section ======= -->
@@ -21,10 +20,10 @@
           <!-- top tiles -->
           <div class="right_col" style="height: 513px;" >
             <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
-              <h1>Bienvenue ADMINISTRATEUR </h1>
+              <h1>Bienvenue Dans Votre espace chambre </h1>
             
               <h2>Gerer le fonctionnement de votre CITE</h2>
-              <a href="gestion_des_paiements.html" class="btn-get-started scrollto">Allons-y</a>
+              <a th:href="@{UserAccueil}" class="btn-get-started scrollto">Allons-y</a>
             </div>
           </div><!-- End Hero -->
           <!-- /top tiles -->

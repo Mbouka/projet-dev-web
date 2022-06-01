@@ -10,7 +10,7 @@
     <title>CITE - WE! | </title>
 
     <!-- Bootstrap -->
-    <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link th:href="@{../cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css}">
     <link th:href="@{../vendors/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
     <!-- Font Awesome -->
     <link th:href="@{../vendors/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
@@ -19,18 +19,20 @@
     <!-- bootstrap-daterangepicker -->
     <link th:href="@{../vendors/bootstrap-daterangepicker/daterangepicker.css}" rel="stylesheet">
     <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link th:href="@{../vendors/iCheck/skins/flat/green.css}" rel="stylesheet">
     <!-- Datatables -->
 
-    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css}" rel="stylesheet">
 
 
     <!-- Custom Theme Style -->
     <link th:href="@{../build/css/custom.min.css}" rel="stylesheet">
+
+    <link th:href="@{../build/css/style.css}" rel="stylesheet">
     <style>
         .styled {
     border: 0;
