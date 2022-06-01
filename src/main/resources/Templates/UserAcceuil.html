@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">>
+
+<th:block th:replace="fragments/_head.html::head"></th:block>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <th:block th:replace="Fragment/_leftcolUser.html::leftcolUser"></th:block>
+        </div>
+
+        <!-- top navigation -->
+        <th:block th:replace="Fragment/_topnav.html::topnav"></th:block>
+        <!-- /top navigation -->
+        <!-- ======= Hero Section ======= -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Profil de ma Chambre</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-secondary" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Informations sur ma Consommation</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div class="col-md-3 col-sm-3  profile_left">
+                      <div class="profile_img">
+                        <div id="crop-avatar">
+                          <!-- Current avatar -->
+                          <img class="img-responsive avatar-view" src="images/user.png" alt="Avatar" title="Change the avatar">
+                        </div>
+                      </div>
+                      <h3>Raouf</h3>
+
+                      <ul class="list-unstyled user_data">
+                        <li><i class="fa fa-phone"></i> 6XXXXXXXXXXX
+                        </li>
+
+                        <li>
+                          <i class="fa fa-mortar-board"></i> Ingénieur 3 ISI
+                        </li>
+
+                        <li class="m-top-xs">
+                          <i class="fa fa-envelope-o"></i>
+                          <a href="http://www.kimlabs.com/profile/" target="_blank">www.kimlabs.gmail</a>
+                        </li>
+                      </ul>
+
+                      <a href="Ufactures.html"><button class="btn btn-success"><i class="fa fa-money"></i> Mes Factures</a></button>
+                      <br />
+                    </div>
+                    <div class="col-md-9 col-sm-9 ">
+
+                      <div class="profile_title">
+                        <div class="col-md-6">
+                          <h2>Consommation de l'utilisateur</h2>
+                        </div>
+                        <div class="col-md-6">
+                          <div id="reportrange" class="pull-right" style="margin-top: 5px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #E6E9ED">
+                            <i class="fa fa-calendar"></i>
+                            <span>December 30, 2021 - January 28, 2022</span> <b class="caret"></b>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- start of user-activity-graph -->
+						</br>
+					  	<div class="col-md-6 col-sm-6  ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Consommation électricité <small>Par mois</small></h2>
+                 
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content"><iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
+                    <canvas id="mybarChart" height="357" width="715" style="width: 572px; height: 286px;"></canvas>
+                  </div>
+                </div>
+              </div>
+			
+              <div class="col-md-4 col-sm-6  ">
+                <div class="x_panel" style="
+    width: 366px;
+    height: 277px;
+">
+                  <div class="x_title">
+                    <h2>Consommation en Eau <small>par mois</small></h2>
+                 
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content"><iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe><iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
+                    <canvas id="canvasDoughnut" height="202" width="405" style="width: 324px; height: 162px;"></canvas>
+                  </div>
+                </div>
+              </div>
+
+				  </div>
+				  </div>
+                      <!-- end of user-activity-graph -->
+							
+                </div>
+              </div>
+            </div>
+			</div>
+        </div>
+        <!-- /page content -->
+
+ 
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- morris.js -->
+    <script src="../vendors/raphael/raphael.min.js"></script>
+    <script src="../vendors/morris.js/morris.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+<script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+<script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+
+  </body>
+</html>

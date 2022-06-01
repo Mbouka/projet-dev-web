@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="fragments/_head.html::head"></th:block>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <th:block th:replace="Fragment/_leftcolAdmin.html::leftcolAdmin"></th:block>
+        </div>
+
+        <!-- top navigation -->
+        <th:block th:replace="Fragment/_topnav.html::topnav"></th:block>
+        <!-- /top navigation -->
+        <!-- ======= Hero Section ======= -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3><strong >Gestion Des Paiements</strong></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                </div>
+              </div>
+            </div>
+
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  
+                   <div class="x_content">
+                      <div class="row">
+                           
+                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                      <thead>
+                        <tr>
+                          <th>N° de chambre</th>
+                          <th>Nombre de Resident(s)</th>
+                          <th>Nom des Residents</th>
+                          
+                          <th>Date de Paiement</th>
+                          <th>Montant</th>
+                          <th>N° tel</th>
+                          <th>E-mail</th>
+                          <th>Statut</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>001</td>
+                          <td><img src="images/user.png" class="avatar" alt="Avatar"></td>
+                          <td>nixon mballa</td>
+                          
+                          <td>2011/04/25</td>
+                          <td>3000 FRS CFA</td>
+                          <td>699-638-657</td>
+                          <td>t.nixon@datatables.net</td>
+                          <td><strong>Impayer</strong></td>
+                        </tr>
+                        <tr>
+                          <td>002</td>
+                          <td><img src="images/user.png" class="avatar" alt="Avatar">
+                            <img src="images/user.png" class="avatar" alt="Avatar">
+                          </td>
+                          <td>nick mbilla<br>sonia tonfack</td>
+                          
+                          <td>2011/04/25</td>
+                          <td>300FRS CFA</td>
+                          <td>699-638-657</td>
+                          <td>t.nixon@datatables.net<br>s.sonia@yahoo.net</td>
+                          <td><strong>Payer</strong></td>
+                        </tr>
+                       
+
+                      </tbody>
+                    </table>
+					
+					
+                  </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+       
+      </div>
+    </div>
+     
+
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Datatables -->
+    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+  </body>
+</html>
