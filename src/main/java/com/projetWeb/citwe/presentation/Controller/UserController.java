@@ -18,6 +18,6 @@ public class UserController {
     @GetMapping("/")
     public String pageAccueil(Model model) {
         //utiliser cette espace pour visualiser l'interface ou vous travailler
-      return "index";
+      return "indexAdmin";
     }
 }

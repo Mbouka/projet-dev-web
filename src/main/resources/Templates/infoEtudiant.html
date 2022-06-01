@@ -60,26 +60,26 @@
                   </div>
                   <div class="x_content">
                     <br>
-                    <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+                    <form id="demo-form2" th:action="@{/editeretudiantchambre}" th:method="post" th:object="${etudiamtchambreDto} data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
   
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name"><font _mstmutation="1" _msthash="520858" _msttexthash="93574">Prénom </font><span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" id="first-name" required="required" class="form-control ">
+                          <input  th:field="*{etudiantchambre.id2.prenom}" type="text" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name"><font _mstmutation="1" _msthash="521105" _msttexthash="31395">Nom </font><span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control">
+                          <input  th:field="*{nom}" type="text" id="last-name" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label for="email" class="col-form-label col-md-3 col-sm-3 label-align" _msthash="521352" _msttexthash="596518">Mail</font><span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input id="email" class="form-control" type="email" name="email">
+                          <input  th:field="*{email}" id="email" class="form-control" type="email" name="email">
                         </div>
                       </div>
                       <div class="item form-group">
@@ -187,29 +187,6 @@
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- morris.js -->
-    <script src="../vendors/raphael/raphael.min.js"></script>
-    <script src="../vendors/morris.js/morris.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-
-<script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-<script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-<script src="../vendors/echarts/dist/echarts.min.js"></script>
-<script src="../vendors/echarts/map/js/world.js"></script>
+    <th:block th:replace="Fragment/_js.html::js"></th:block>
   </body>
 </html>

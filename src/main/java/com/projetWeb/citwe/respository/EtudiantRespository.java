@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface EtudiantRespository extends JpaRepository<Etudiant, Long> {
     /*Optional<Etudiant> findEtudiantByNumChambre(String numero);*/
-    Optional<Etudiant> findByMatriculeOrNom(String motcle1, String motcle2);
+    Optional<Etudiant> findByMatricule(String matricule);
 }

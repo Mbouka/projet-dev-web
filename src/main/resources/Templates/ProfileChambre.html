@@ -49,26 +49,26 @@
                       <div class="profile_img">
                         <div id="crop-avatar">
                           <!-- Current avatar -->
-                          <img class="img-responsive avatar-view" src="images/picture.jpg" alt="Avatar" title="Change the avatar">
+                          <img class="img-responsive avatar-view" th:src="@{/gentelella-master/production/images/picture.jpg}" alt="Avatar" title="Change the avatar">
                         </div>
                       </div>
-                      <h3>Raouf</h3>
+                      <h3 th:text="${etudiantDto.nom}">Raouf</h3>
 
                       <ul class="list-unstyled user_data">
-                        <li><i class="fa fa-phone"></i> 6XXXXXXXXXXX
+                        <li><i class="fa fa-phone"></i> <p th:text="${etudiantDto.telephone}">6XXXXXXXXXXX</p>
                         </li>
 
                         <li>
-                          <i class="fa fa-mortar-board"></i> Ingénieur 3 ISI
+                          <i class="fa fa-mortar-board"></i> <p th:text="${etudiantDto.nom}"> Ingénieur 3 ISI</p>
                         </li>
 
                         <li class="m-top-xs">
                           <i class="fa fa-envelope-o"></i>
-                          <a href="http://www.kimlabs.com/profile/" target="_blank">www.kimlabs.gmail</a>
+                          <a href="http://www.kimlabs.com/profile/" target="_blank" th:text="${etudiantDto.email}">www.kimlabs.gmail</a>
                         </li>
                       </ul>
 
-                      <a href="infoEtudiant.html"><button class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a></button>
+                      <a href="/editerform?matricule=' + ${etudiantDto.matricule"><button class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a></button>
                       <br />
                     </div>
                     <div class="col-md-9 col-sm-9 ">
@@ -130,28 +130,6 @@
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- morris.js -->
-    <script src="../vendors/raphael/raphael.min.js"></script>
-    <script src="../vendors/morris.js/morris.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-
-<script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-<script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-
+    <th:block th:replace="Fragment/_js.html::js"></th:block>
   </body>
 </html>

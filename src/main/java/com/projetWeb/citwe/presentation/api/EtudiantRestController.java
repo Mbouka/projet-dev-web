@@ -29,10 +29,10 @@ public class EtudiantRestController {
     }
 
 
-    @GetMapping("/{keyword}/data")
-    public ResponseEntity<EtudiantDto> getEtudiant(@PathVariable String keyword1,String keyword2){
+    @GetMapping("/{matricule}/data")
+    public ResponseEntity<EtudiantDto> getEtudiant(@PathVariable String matricule){
 
-        return ResponseEntity.ok(ietudiant.searchEtudiantByMatriculeOrNom(keyword1, keyword2));
+        return ResponseEntity.ok(ietudiant.searchEtudiantByMatricule(matricule));
     }
 
 

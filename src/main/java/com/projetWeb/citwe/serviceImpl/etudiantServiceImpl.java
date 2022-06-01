@@ -2,6 +2,7 @@ package com.projetWeb.citwe.serviceImpl;
 
 import com.projetWeb.citwe.mapper.EtudiantMapper;
 import com.projetWeb.citwe.model.Dto.EtudiantDto;
+import com.projetWeb.citwe.model.entities.Etudiant;
 import com.projetWeb.citwe.respository.EtudiantRespository;
 import com.projetWeb.citwe.service.Ietudiant;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,8 @@ public class etudiantServiceImpl  implements Ietudiant {
     }
 
     @Override
-    public EtudiantDto searchEtudiantByMatriculeOrNom(String keyword1, String keyword2) {
-        return etudiantMapper.toDto(etudiantRespository.findByMatriculeOrNom(keyword1,keyword2).get());
+    public EtudiantDto searchEtudiantByMatricule(String Matricule) {
+        return etudiantMapper.toDto(etudiantRespository.findByMatricule(Matricule).get());
     }
 
     @Override
@@ -31,6 +32,13 @@ public class etudiantServiceImpl  implements Ietudiant {
         return etudiantRespository.findAll().stream()
                 .map(etudiantMapper::toDto)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public EtudiantDto updateEtudiant(EtudiantDto etudiantDto) {
+        Etudiant etudiant = etudiantRespository.findByMatricule(etudiantDto.getMatricule()).get();
+       etudiantMapper.copy(etudiantDto, etudiant);
+        return etudiantMapper.toDto(etudiantRespository.save(etudiant));
     }
 
 

@@ -18,6 +18,7 @@ public class Etudiantchambre {
     @JoinColumn(name = "id_chambre", nullable = false)
     private Chambre idChambre;
 
+
     public Chambre getIdChambre() {
         return idChambre;
     }
