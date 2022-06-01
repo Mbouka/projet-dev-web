@@ -17,7 +17,7 @@ public class UserController {
     Ietudiant ietudiant;
     @GetMapping("/")
     public String pageAccueil(Model model) {
-        return "index";
+        //utiliser cette espace pour visualiser l'interface ou vous travailler
+      return "index";
     }
-
 }
