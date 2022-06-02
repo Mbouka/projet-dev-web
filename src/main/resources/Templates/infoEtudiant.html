@@ -60,52 +60,52 @@
                   </div>
                   <div class="x_content">
                     <br>
-                    <form id="demo-form2" th:action="@{/editeretudiantchambre}" th:method="post" th:object="${etudiantchambreDto} data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+                    <form id="demo-form2" th:action="@{/editeretudiantchambre}" th:method="post" th:object="${etudiantchambreDto}" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
   
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name"><font _mstmutation="1" _msthash="520858" _msttexthash="93574">Prénom </font><span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input  th:field="*{etudiantchambre.id2.prenom}" type="text" id="first-name" required="required" class="form-control ">
+                          <input  th:field="*{id2.prenom}" type="text" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name"><font _mstmutation="1" _msthash="521105" _msttexthash="31395">Nom </font><span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input  th:field="*{nom}" type="text" id="last-name" name="last-name" required="required" class="form-control">
+                          <input  th:field="*{id2.nom}" type="text" id="last-name" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
                       <div class="item form-group">
+                      <label for="info-number" class="col-form-label col-md-3 col-sm-3 label-align" _msthash="521352" _msttexthash="596518">Matricule</font><span class="required">*</span></label>
+                      <div class="col-md-6 col-sm-6 ">
+                        <input  th:field ="*{id2.matricule}" id="info_number" class="form-control" type="text" name="info-number" value="001" disabled>
+                      </div>
+                    </div>
+                      <div class="item form-group">
                         <label for="email" class="col-form-label col-md-3 col-sm-3 label-align" _msthash="521352" _msttexthash="596518">Mail</font><span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input  th:field="*{email}" id="email" class="form-control" type="email" name="email">
+                          <input  th:field="*{id2.email}" id="email" class="form-control" type="email" name="email">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label for="info-number" class="col-form-label col-md-3 col-sm-3 label-align" _msthash="521352" _msttexthash="596518">Num_chambre</font><span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input id="info_number" class="form-control" type="text" name="info-number" value="001" disabled>
+                          <input  th:field ="*{idChambre.numero}" id="info_number" class="form-control" type="text" name="info-number" value="001" disabled>
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" _msthash="521599" _msttexthash="59098">Genre</label>
+                        <label for="info-number" class="col-form-label col-md-3 col-sm-3 label-align" _msthash="521352" _msttexthash="596518">Num_telephone</font><span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 ">
-                          <div id="gender" class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="male" class="join-btn" data-parsley-multiple="gender"><font _mstmutation="1" _msthash="235937" _msttexthash="56277"> Mâle </font></label>
-                            <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="female" class="join-btn" data-parsley-multiple="gender"><font _mstmutation="1" _msthash="236106" _msttexthash="92118"> Femelle </font></label>
-                          </div>
+                          <input  th:field ="*{id2.telephone}" id="info_number" class="form-control" type="text" name="info-number" value="001" disabled>
                         </div>
                       </div>
-               
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                          <a href="profile2.html"><button class="btn btn-primary" type="button" _msthash="802789" _msttexthash="95901">Annuler</button></a>
                           <button class="btn btn-primary" type="reset" _msthash="802971" _msttexthash="335517">Réinitialisation</button>
-                          <button type="submit" class="btn btn-success" _msthash="803153" _msttexthash="98280">Envoyer</button>
+                          <input type="submit" class="btn btn-success" _msthash="803153" _msttexthash="98280"></input>
                         </div>
                       </div>
   

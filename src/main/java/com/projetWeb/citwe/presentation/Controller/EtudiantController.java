@@ -34,18 +34,19 @@ public class EtudiantController {
     public String editeretudiantchambreForm(@RequestParam(name = "numero") String numero, Model model) {
 
         EtudiantchambreDto etudiantchambreDto= iEtudiantchambre.searchEtudiantChambreByNumero(numero);
+        System.out.println(etudiantchambreDto);
         model.addAttribute("etudiantchambreDto", etudiantchambreDto);
         return "infoEtudiant";
     }
 
     @PostMapping("/editeretudiantchambre")
-    public String editeretudiant(@ModelAttribute EtudiantchambreDto etudiantchambreDto,
+    public String editeretudiantchambre(@ModelAttribute EtudiantchambreDto etudiantchambreDto,
                              Model model) {
-
+        System.out.println(etudiantchambreDto);
         EtudiantController.log.info("editer-etudiant");
         // appel de la couche service ou metier injectée pour enregistrer un materiel
        iEtudiantchambre.updateEtudiantChambre(etudiantchambreDto);
-        return "redirect:/ProfilChambre";
+        return "redirect:/liste_des_chambres";
     }
 
 }
