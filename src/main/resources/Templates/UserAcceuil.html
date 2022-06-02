@@ -49,13 +49,13 @@
                       <div class="profile_img">
                         <div id="crop-avatar">
                           <!-- Current avatar -->
-                          <img class="img-responsive avatar-view" src="images/user.png" alt="Avatar" title="Change the avatar">
+                          <img class="img-responsive avatar-view" th:src="@{/images/user.png}" alt="Avatar" title="Change the avatar">
                         </div>
                       </div>
-                      <h3>Raouf</h3>
+                      <h3 th:text="${etudiantDto.nom}">Raouf</h3>
 
                       <ul class="list-unstyled user_data">
-                        <li><i class="fa fa-phone"></i> 6XXXXXXXXXXX
+                        <li ><i th:text="${etudiantDto.telephone}" class="fa fa-phone"></i> 6XXXXXXXXXXX
                         </li>
 
                         <li>
@@ -64,18 +64,19 @@
 
                         <li class="m-top-xs">
                           <i class="fa fa-envelope-o"></i>
-                          <a href="http://www.kimlabs.com/profile/" target="_blank">www.kimlabs.gmail</a>
+                          <a th:text="${etudiantDto.email}" target="_blank">www.kimlabs.gmail</a>
                         </li>
                       </ul>
 
-                      <a href="Ufactures.html"><button class="btn btn-success"><i class="fa fa-money"></i> Mes Factures</a></button>
+                      <a href="Ufactures.html"><button class="btn btn-success"><i class="fa fa-money"></i> Mes Factures</button></a>
                       <br />
                     </div>
                     <div class="col-md-9 col-sm-9 ">
 
                       <div class="profile_title">
                         <div class="col-md-6">
-                          <h2>Consommation de l'utilisateur</h2>
+                          <h2>Consommation de </h2>
+                          <h2 th:text="${etudiantDto.nom}"> utilisateur</h2>
                         </div>
                         <div class="col-md-6">
                           <div id="reportrange" class="pull-right" style="margin-top: 5px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #E6E9ED">
