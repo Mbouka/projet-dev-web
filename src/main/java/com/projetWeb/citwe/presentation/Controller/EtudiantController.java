@@ -46,7 +46,7 @@ public class EtudiantController {
         EtudiantController.log.info("editer-etudiant");
         // appel de la couche service ou metier injectée pour enregistrer un materiel
        iEtudiantchambre.updateEtudiantChambre(etudiantchambreDto);
-        return "redirect:/liste_des_chambres";
+        return "redirect:/ProfileChambre";
     }
 
 }
