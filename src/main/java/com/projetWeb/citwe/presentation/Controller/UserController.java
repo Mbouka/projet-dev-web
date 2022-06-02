@@ -1,4 +1,4 @@
-package com.projetWeb.citwe.presentation.Controller;
+package com.projetWeb.citwe.presentation.controller;
 
 import com.projetWeb.citwe.service.Ichambre;
 import com.projetWeb.citwe.service.Ietudiant;
