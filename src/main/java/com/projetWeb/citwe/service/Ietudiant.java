@@ -1,7 +1,7 @@
 package com.projetWeb.citwe.service;
 
 import com.projetWeb.citwe.model.Dto.EtudiantDto;
-import com.projetWeb.citwe.presentation.Controller.EtudiantController;
+import com.projetWeb.citwe.presentation.controller.EtudiantController;
 
 import java.util.List;
 
