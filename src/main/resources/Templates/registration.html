@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="Fragment/_head.html::head"></th:block>
+    <title>Registration</title>
+</head>
+<body>
+<div id="register" class="animate form registration_form">
+    <section class="login_content">
+        <form th:action="@{/registration}" th:object="${user}" method="POST">
+            <h1>Create Account</h1>
+            <div>
+                <input type="text" class="form-control" th:field="*{username}" placeholder="Username" required="" />
+                <label th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></label>
+
+            </div>
+            <div>
+                <input type="email" class="form-control" th:field="*{email}" placeholder="Email" required="" />
+                <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
+
+            </div>
+            <div>
+                <input type="password" class="form-control" th:field="*{password}" placeholder="Password" required="" />
+                <label th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></label>
+
+            </div>
+            <div>
+                <button type="submit" class="btn btn-default submit">Submit</button>
+            </div>
+
+            <h2><span class="text-success" th:utext="${successMessage}"></span></h2>
+
+            <div class="clearfix"></div>
+
+            <div class="separator">
+                <p class="change_link">Already a member ?
+                    <a th:href="@{/Login}" class="to_register"> Log in </a>
+                </p>
+
+                <div class="clearfix"></div>
+                <br />
+
+                <div>
+                    <h1><i class="fa fa-paw"></i> CITE WE!</h1>
+                    <p>©2022 All Rights Reserved. Cite WE! . Privacy and Terms</p>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+</body>
+</html>
