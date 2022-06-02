@@ -1,18 +1,17 @@
 package com.projetWeb.citwe.model.Dto;
 
-import com.projetWeb.citwe.model.entities.FactureId;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
-public class FactureDto  {
-
-    private final FactureId id;
-    private String numFacture;
-private  String consoEau;
-private String consoElectricite;
-private String prix;
-private String date;
-private String delai;
+public class FactureDto implements Serializable {
+    private final Long id;
+    private final String consoEau;
+    private final String consoElectricite;
+    private final String prix;
+    private final String date;
+    private final String delai;
+    private final ChambreDto idChambre;
+    private final String numFacture;
 }
