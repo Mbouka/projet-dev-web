@@ -17,6 +17,7 @@ public interface FactureMapper {
  FactureDto toDto(Facture facture);
 
     void copy(FactureDto factureDto, @MappingTarget Facture facture);
+    
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     void updateFactureFromFactureDto(FactureDto factureDto, @MappingTarget Facture facture);

@@ -26,6 +26,7 @@ public class FactureRestController {
 
         return ResponseEntity.ok(ifacture.searchFactureByNumFacture(numFacture));
     }
+
     @GetMapping("/all")
     public ResponseEntity<List<FactureDto>> getAllFacture() {
         return ResponseEntity.ok(ifacture.listFactures());

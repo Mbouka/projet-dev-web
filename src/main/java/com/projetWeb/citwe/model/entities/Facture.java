@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "facture")
 public class Facture {
     @Id
+
     @Column(name = "idfacture", nullable = false)
     private Long id;
 

@@ -15,3 +15,4 @@ public class FactureDto implements Serializable {
     private final ChambreDto idChambre;
     private final String numFacture;
 }
+    private final String numFacture;
